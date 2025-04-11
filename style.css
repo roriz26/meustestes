@@ -7,15 +7,29 @@ body {
   
 }
 
-.bt {
 
+.bt {
     padding: 15px;
     justify-content: center;
     text-align: center;
-}
-
-button {
-
+  }
+  
+  /* ANIMAÇÃO */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(30);
+    }
+  }
+  
+  /* BOTÃO COM ANIMAÇÃO */
+  button {
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
     display: flex;
     border: solid 1px;
     border-radius: 10px;
@@ -31,60 +45,39 @@ button {
     align-items: center;
     padding: 10px;
     cursor: pointer;
-
-}
-
-button:hover {
-
+    transition: all 0.3s ease;
+  }
+  
+  /* HOVER */
+  button:hover {
     background-color: rgb(0, 0, 0);
     color: rgb(235, 235, 235);
-
-    transition: all 0.10s ease;
-
-}
-
-
-
-
-a {
-
+  }
+  
+  a {
     text-decoration: none;
-    color: inherit
-}
-
-
-
-
-
-h2 {
-
+    color: inherit;
+  }
+  
+  h2 {
     font-size: 16px;
     font-family: sans-serif;
-  padding: 10px;
-   text-align: center;
-   justify-content: center;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+  }
   
-
-}
-
-
-.logo {
-
-background-color: rgba(0, 0, 0, 0.936);
-color: rgb(255, 255, 255);
-
-
-
-}
-
-h3 {
-
+  .logo {
+    background-color: rgba(0, 0, 0, 0.936);
+    color: rgb(255, 255, 255);
+  }
+  
+  h3 {
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-
-.footer {
+  }
+  
+  .footer {
     background-color: #f8f8f8;
     padding: 20px;
     text-align: center;
@@ -98,11 +91,11 @@ h3 {
   .map-container {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* Proporção 16:9 */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
   
   .map-container iframe {
@@ -114,15 +107,15 @@ h3 {
     border: 0;
   }
   
-
-
+  /* RESPONSIVO */
   @media (max-width: 480px) {
     button {
       width: 90%;
       font-size: 14px;
     }
   
-    h2, h3 {
+    h2,
+    h3 {
       font-size: 16px;
     }
   
